@@ -1,15 +1,19 @@
 /*
- *	Analizador Léxico	
+ *	Analizador Lï¿½xico	
  *	Curso: Compiladores y Lenguajes de Bajo de Nivel
- *	Práctica de Programación Nro. 1
+ *	Prï¿½ctica de Programaciï¿½n Nro. 1
  *	
+ * 	Integrantes:
+ *	- RenÃ© Azcurra
+ * 	- Nery Riquelme
+ *
  *	Descripcion:
- *	Implementa una analizador léxico para una calculadora de expresiones
- *  aritmeticas que reconoce números (enteros, reales, notación científica),
- *  operadores, y comentarios de un archivo fuente con lineas de operaciones aritméticas.
+ *	Implementa una analizador lï¿½xico para una calculadora de expresiones
+ *  aritmeticas que reconoce nï¿½meros (enteros, reales, notaciï¿½n cientï¿½fica),
+ *  operadores, y comentarios de un archivo fuente con lineas de operaciones aritmï¿½ticas.
  *	
  * 	Despliega cada linea con los lexemas -> token
- *  y al final de la misma la expresión que representa línea
+ *  y al final de la misma la expresiï¿½n que representa lï¿½nea
  */
 
 /*********** Librerias utilizadas **************/
@@ -62,7 +66,7 @@ token t;				// token global para recibir componentes del Analizador Lexico
 
 // variables para el analizador lexico
 
-FILE *archivo;			// Fuente con Expresiones aritméticas
+FILE *archivo;			// Fuente con Expresiones aritmï¿½ticas
 char buff[2*TAMBUFF];	// Buffer para lectura de archivo fuente
 char id[TAMLEX];		// Utilizado por el analizador lexico
 int delantero=-1;		// Utilizado por el analizador lexico
@@ -144,7 +148,7 @@ int siguiente_primo(int n)
 	return n;
 }
 
-//en caso de que la tabla llegue al limite, duplicar el tamaño
+//en caso de que la tabla llegue al limite, duplicar el tamaï¿½o
 void rehash()
 {
 	entrada *vieja;
@@ -297,7 +301,7 @@ void sigLex()
 						else
 							estado=6;
 						break;
-					case 3://una e, debe proseguir un dígito o una secuencia de digitos
+					case 3://una e, debe proseguir un dï¿½gito o una secuencia de digitos
 						c=fgetc(archivo);
 						if (c=='+' || c=='-')
 						{
